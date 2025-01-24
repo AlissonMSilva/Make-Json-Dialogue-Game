@@ -1,17 +1,15 @@
 function criar_propriedade_pin(_x, _y) constructor
 {
-	return {
-		_x_pos: _x,
-		_y_pos: _y,
-		_desenhar_linha: false,
-		_connect: false,
-		_line_connect: false,
-		_node_connect: noone,
-		_is_output: false,
-	}
+    _x_pos = _x;
+    _y_pos = _y;
+    _desenhar_linha = false;
+    _connect = false;
+    _line_connect = false;
+    _node_connect = noone;
+    _is_output = false;
 }
 
-pin = criar_propriedade_pin(x, y);
+pin = new criar_propriedade_pin(x, y);
 
 function criar_linha_conexao()
 {
