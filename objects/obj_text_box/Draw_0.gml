@@ -26,7 +26,7 @@ draw_text(margem_texto - deslocamento, 5, text);
 
 if (active) {
     var largura_texto = string_width(text);
-    var pos_cursor_x = margem_texto + largura_texto - deslocamento; // Posição do cursor final
+    var pos_cursor_x = margem_texto + largura_texto - deslocamento - 5; // Posição do cursor final
     if (pos_cursor_x <= largura_caixa) {
         draw_text(pos_cursor_x, 5, "|"); // Desenha o cursor dentro da área visível
     }

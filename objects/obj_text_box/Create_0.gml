@@ -6,7 +6,7 @@ alarm[0]= delay_cursor;
 text = ""; // Texto digitado
 text_confirmado = "";
 	
-exibir_texto_continuamente = false;
+exibir_texto_continuamente = true;
 max_length = 20; // Máximo de caracteres permitidos
 active = false; // Começa inativo até clicar
 
@@ -59,14 +59,6 @@ function limitar_quantidade_maxima_caracters()
 function adicionar_texto_digitado_na_variavel_desejada()
 {
 	// Desativa a captura de entrada
-	if(!exibir_texto_continuamente)
-	{
-		text_confirmado = text;
-		text = "";
-		keyboard_string = "";
-	}else
-	{
-		text_confirmado = text;
-	}
+	text_confirmado = text;
 	active = false;
 }

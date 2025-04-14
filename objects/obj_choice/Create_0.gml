@@ -7,10 +7,6 @@ action_buttons =
 	add:
 	{
 		sprite: spr_plus,
-		action: function(_lista_de_escolhas, _pos_x, _pos_y)
-		{
-			array_push(_lista_de_escolhas,criar_text_box_choice(_pos_x, _pos_y));
-		}	
 	},
 	remove: 
 	{

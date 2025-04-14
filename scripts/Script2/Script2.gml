@@ -1,4 +1,4 @@
-function criar_text_box_choice(_x, _y) constructor
+function criar_text_box_choice(_x, _y)
 {
 	var _choice_text_box = 
 	{

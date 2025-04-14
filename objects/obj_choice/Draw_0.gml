@@ -7,7 +7,9 @@ if(posicao_igual_posicao_sprite(pos_x - 32, pos_y, pos_x - 32 + 24,pos_y + 24))
 	_plus_button_color = c_gray;
 	if(mouse_check_button_released(mb_left))
 	{
-		action_buttons.add.action(choices,pos_x - 28, pos_y + 20);
+		var text_box_choice = criar_text_box_choice(pos_x - 28, pos_y + 20);
+        array_push(choices, text_box_choice);
+        show_debug_message(choices);
 	}
 }
 
