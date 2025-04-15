@@ -38,7 +38,7 @@ function obter_modal_dialogue_info()
             input:
             { 
                 obj_pin: _element.input
-            }    
+            }
 		};
 		array_push(_modal_dialogues, _dialogue_info);
 	}
