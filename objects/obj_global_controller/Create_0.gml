@@ -16,11 +16,19 @@ if(global.save_file != noone)
 		var _tamanho_array = array_length(global.save_file.modal_dialogues) - 1;
 		for(var _i = 0; _i <= _tamanho_array ; _i++)
 		{
-			var _element = global.save_file.modal_dialogues[_i];
-			var _dialogue = instance_create_layer(_element.x_pos,_element.y_pos, "Instances", obj_modal_dialogue);
-			_dialogue.select_box.obj.valor_selecionado = _element.text_dialogo.personagem;
-			_dialogue.dialogue_text.text_box.obj.text = _element.text_dialogo.text;
-			_dialogue.dialogue_text.text_box.obj.text_confirmado = _element.text_dialogo.text;
+			try {
+            	var _element = global.save_file.modal_dialogues[_i];
+    			var _dialogue = instance_create_layer(_element.x_pos,_element.y_pos, "Instances", obj_modal_dialogue);
+    			_dialogue.select_box.obj.valor_selecionado = _element.text_dialogo.personagem;
+    			_dialogue.dialogue_text.text_box.obj.text = _element.text_dialogo.text;
+    			_dialogue.dialogue_text.text_box.obj.text_confirmado = _element.text_dialogo.text;
+                show_debug_message(_element.output);
+                
+                _dialogue.output.pin._node_connect = _element.output.pin._node_connect;
+            }
+            catch (error) {
+            	
+            }
 		}
 	}
 }

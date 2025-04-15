@@ -21,6 +21,7 @@ function obter_modal_dialogue_info()
 	for(var _i = 0; _i <= array_length(global.dialogues_created) - 1; _i++)
 	{
 		var _element = global.dialogues_created[_i];
+        
 		var _dialogue_info = 
 		{
 			x_pos: _element.modal_x,
@@ -29,9 +30,16 @@ function obter_modal_dialogue_info()
 			{
 				personagem: _element.select_box.obj.valor_selecionado,
 				text: _element.dialogue_text.text_box.obj.text_confirmado,
-			}
+			},
+            output:
+            {
+                obj_pin: _element.output.pin,
+            },
+            input:
+            { 
+                obj_pin: _element.input
+            }    
 		};
-		
 		array_push(_modal_dialogues, _dialogue_info);
 	}
 	return _modal_dialogues;
